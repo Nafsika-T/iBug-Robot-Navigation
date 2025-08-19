@@ -57,9 +57,3 @@ The project consists of **five main classes**:
 
 ## 📸 Demo
 Check out the demo here: [video.mp4](video.mp4)
-
-
----
-
-## 📝 License
-This project is licensed under the MIT License.
