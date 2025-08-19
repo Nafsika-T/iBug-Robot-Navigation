@@ -1,4 +1,4 @@
-# 🤖 iBug Robot Navigation in Java
+# 🤖 iBug Robot Navigation
 
 Implementation of the **i-Bug algorithm** for robot navigation in an unknown environment, developed in **Java** using the **Simbad 1.7** simulation platform and **Java3D**.
 
