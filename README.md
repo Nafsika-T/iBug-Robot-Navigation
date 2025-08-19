@@ -23,11 +23,11 @@ The algorithm ensures that the robot:
 ## 📂 Project Structure
 The project consists of **five main classes**:
 
-- `Main` → Initializes the environment and starts the simulation.  
-- `MyRobot` → Extends the Simbad robot class with custom behavior.  
-- `iBug` → Implements the i-Bug navigation algorithm.  
-- `Sensors` → Manages the robot’s proximity sensors and detection logic.  
-- `Utils` → Helper methods for calculations (distances, angles, etc.).
+- `Main` → Builds the **EnvironmentDescription** (lamp/goal, 3 walls, box), places the `MyRobot` into the scene, and launches **Simbad**.  
+- `MyRobot` → Extends `Agent`. In the constructor it creates **12 distance (sonar) sensors** around the robot and **3 light sensors** (center, front-left, front-right). Its `performBehavior` delegates to `iBug.step()`.  
+- `Behaviors` → Helper behaviors used by the controller: `AlignmentGoal`, `MoveToGoal`, `CircumNavigate`, `LocalMax`, `zeroMax`, `Terminate`, `stop`.  
+- `iBug` → The main controller: defines the **enum** with the 4 states, holds references to the robot & sensors, and implements `step()` to orchestrate the state transitions.  
+- `Tools` → Utility methods used by `Behaviors`, e.g., `getSensedPoint` (compute obstacle hit point from sonars) and `wrapToPi` (normalize angle to [-π, π]).  
 
 ---
 
@@ -56,7 +56,7 @@ The project consists of **five main classes**:
 ---
 
 ## 📸 Demo
-*(Add screenshots or GIFs of the simulation here)*
+Check out the demo here: video.mp4 
 
 ---
 
